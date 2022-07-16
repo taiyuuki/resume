@@ -1,8 +1,8 @@
 {
   "name": "resume",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A vue3 app by quasar-cli(vite), Web resume",
-  "productName": "My Resume",
+  "productName": "Resume",
   "author": "taiyuuki <taiyuuki@qq.com>",
   "private": true,
   "scripts": {

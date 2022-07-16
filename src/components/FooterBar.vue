@@ -1,14 +1,24 @@
 <template>
   <div class="footer-bar">
     <div class="taiyuuki q-py-lg">Taiyuuki</div>
-    <a href="https://github.com/taiyuuki/resume" target="_blank"><img
-        src="https://img.shields.io/github/stars/taiyuuki/resume?style=social" alt="resume" /></a>
+    <a href="https://github.com/taiyuuki/resume" target="_blank">
+      <img @load="isLoad" :style="noneDisplay" src="https://img.shields.io/github/stars/taiyuuki/resume?style=social"
+        alt="resume" />
+      <q-skeleton v-if="skeleton" type="QBadge" />
+    </a>
     <div class="q-py-sm">Copyright © 2022 Taiyuuki</div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 
+const skeleton = ref<boolean>(true)
+const noneDisplay = ref<string>('display:none')
+const isLoad = () => {
+  noneDisplay.value = '';
+  skeleton.value = false;
+}
 </script>
 
 <style lang="scss">

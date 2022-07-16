@@ -4,7 +4,9 @@
       style="transition-delay:500ms">
       <img src="/public/webp/work2.webp" alt="wrok2">
     </div>
-    <ChatMessage>{{ t('about') }}</ChatMessage>
+    <ChatMessage>
+      <p v-for="(_, i) in Array(4)" :key="i">{{ t(`about.p${i + 1}`) }}</p>
+    </ChatMessage>
   </div>
 </template>
 
@@ -33,6 +35,16 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin: 3.5rem auto 0;
+
+  .about-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px 0;
+    padding: 5px 0;
+    color: #000;
+  }
 }
 
 @media screen and (max-width:620px) {

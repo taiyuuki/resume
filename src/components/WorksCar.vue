@@ -14,7 +14,7 @@
       <ChatMessageVue class="work-text gt-sm">{{ t('work.text') }}</ChatMessageVue>
       <ChatMessageVue>
         <h2 class="work-name">{{ message.name }}</h2>
-        <div class="stack q-gutter-sm">
+        <div class="q-gutter-sm">
           <q-badge v-for="item in message.setStacks" :key="item" outline color="accent" :label="item" />
         </div>
         <p class="desc">{{ message.description }}</p>
@@ -82,12 +82,6 @@ onMounted(() => {
   justify-content: space-between;
 }
 
-@media screen and (max-width:620px) {
-  .work-carousel {
-    display: block;
-  }
-}
-
 .q-carousel {
   max-width: 700px;
   margin: 0 auto;
@@ -127,24 +121,15 @@ onMounted(() => {
 .work-text {
   color: #000;
   font-size: 1.2rem;
-  margin-top: 3rem;
 }
 
 .work-name {
   font-size: 1.5rem;
   line-height: 1.5rem;
   font-weight: bold;
-  margin: 5px 0;
-  padding: 5px 0;
+  margin: 10px 0;
+  padding: 10px 0;
   color: #000;
-}
-
-.stack {
-  span {
-    background-color: $warning;
-    color: #fff;
-    border-radius: 3px;
-  }
 }
 
 .desc {
@@ -152,5 +137,11 @@ onMounted(() => {
   color: $primary;
   padding: 5px 0;
   margin: 5px 0;
+}
+
+@media screen and (max-width:1023px) {
+  .work-carousel {
+    display: block;
+  }
 }
 </style>

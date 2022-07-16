@@ -29,6 +29,10 @@ body {
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Emoji, 'Helvetica', Arial, sans-serif;
 }
 
+body h1 {
+  letter-spacing: initial;
+}
+
 .transform-start {
   opacity: 0;
   transform: translateX(-100px);
